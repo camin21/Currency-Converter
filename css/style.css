@@ -1,0 +1,119 @@
+p {
+  font-family: Times New Roman;
+  text-align: center;
+}
+
+.container1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    height: 70px;
+}
+
+.currencySelection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    height: 70px;
+}
+
+#currencySelectionFrom,
+#currencySelectionTo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    height: 70px;
+    font-size: 60%;
+    margin: 5%;
+}
+
+#cartListSelection,
+#tripListSelection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 100%;
+    margin-left: auto;
+}
+
+.listSelection {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin-bottom: auto;
+}
+
+input[type="text"] {
+    height: 35px;
+    padding: 5px;
+    margin: 10px;
+}
+
+input[type="button"] {
+  height: 30px;
+  padding: 5px;
+  margin: 10px;
+}
+
+body {
+    background-color: rgb(117, 0, 0);
+    font-size: 17px;
+    font-family: Verdana;
+    margin: auto;
+  }
+  
+  #wrapper {  
+    width:50%;
+    padding: 2rem;  
+    margin-left:auto;  
+    margin-right:auto;  
+    background-color: #ffffff;
+    border-style: solid;
+    border-width: 5px;
+    border-color: #faebd7;
+  }
+  
+  h1,
+  h2,
+  h3,
+  h4 {
+    text-align: center;
+    font-family: Verdana;
+    margin: 0px;
+  }
+    
+  nav {
+    text-align: center;
+  }
+  
+  nav li {
+    display: inline;
+  }
+  
+  nav a {
+    padding-right: 3rem;
+    padding-left: 3rem;
+    color: rgb(0, 0, 0);
+    text-decoration-line: none;
+  }  
+  
+  form {
+    text-align: center;
+    width: 100%;
+  }
+  
+  input[type="submit"] {
+    display: block;
+    margin: 0 auto;
+  }
+
+  a:hover {
+    color: darkred;
+  }

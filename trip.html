@@ -1,0 +1,93 @@
+<!--written by Chandni Amin; last modified on 11 April 2021 at 8:52 AM-->
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>&cent; Current App Prototype</title>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <style>
+    .toggler {
+      width: 500px;
+      height: 200px;
+    }
+    #buttonListZ {
+      text-decoration: none;
+      float: right;
+      position: sticky;
+      top: 9%;
+    }
+    #buttonListZDelete {
+      text-decoration: none;
+      float: right;
+      position: sticky;
+    }
+
+    #effect {
+      width: 240px;
+      height: 170px;
+      padding: 0.4em;
+    }
+    #effect h3 {
+      margin: 0;
+      padding: 0.4em;
+      text-align: center;
+    }
+    </style>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+    $( function() {
+
+      // run the currently selected effect
+      function runEffect() {
+        // get effect type from
+        var selectedEffect = "fold";
+        // Run the effect
+        $( "#effect2" ).toggle( selectedEffect );
+      };
+
+      $( "#buttonListZ" ).on( "click", function() {
+        runEffect();
+      });
+
+      window.onload = function() {
+        runEffect();
+      };
+    } );
+    </script>
+ </head>
+ <body>
+    <div id="wrapper">
+        <header role="banner">
+          <h1><img alt="Current" width="297.5" height="81.5" src="images/header.jpg"></h1>
+
+          <nav role="navigation">
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="cart.html">Carts</a></li>
+              <li><a href="trip.html">Trips</a></li>
+              <li><a href="history.html">History</a></li>
+            </ul>
+          </nav>
+        </header>
+    <main id="main-content" tabindex="-1" role="main">
+      <div class="toggler1">
+        <h3>Trip List Z</h3>
+        <button id="buttonListZ" class="ui-state-default ui-corner-all">trip details</button>
+        <br><div id="effect2" class="ui-widget-content ui-corner-all">
+          <p id="textListZ" >
+            Add a conversion to this list to have it show up here!
+          </p>
+          <button id="buttonListZDelete">delete selected</button><br>
+        </div>
+      </div>
+    </main>
+    <footer role="contentinfo">
+    <p><small>All content &copy; 2021 Dani Amin.</small></p>
+    </footer>
+    </div>
+ </body>
+ <script src="./js/trips.js" type="text/javascript"></script>
+</html>

@@ -1,0 +1,114 @@
+<!--written by Chandni Amin; last modified on 11 April 2021 at 8:52 AM-->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>&cent; Current App Prototype</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <style>
+  .toggler {
+    width: 500px;
+    height: 200px;
+  }
+  #buttonListB,
+  #buttonListA {
+      float: right;
+      position: sticky;
+      text-decoration: none;
+  }
+
+  #buttonListADelete,
+  #buttonListBDelete {
+      text-decoration: none;
+      float: right;
+      position: sticky;
+    }
+
+  #effect {
+    position: relative;
+    width: 240px;
+    height: 170px;
+    padding: 0.4em;
+  }
+  #effect h3 {
+    margin: 0;
+    padding: 0.4em;
+    text-align: center;
+  }
+  </style>
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    // run the currently selected effect
+    function runEffect() {
+      $( "#effect1" ).toggle("fold");
+    };
+ 
+    // Set effect from select menu value
+    $( "#buttonListA" ).on( "click", function() {
+      runEffect();
+    });
+
+    function runEffect1() {
+      $( "#effect2" ).toggle("fold");
+    };
+
+    $( "#buttonListB" ).on( "click", function() {
+      runEffect1();
+    });
+
+    window.onload = function() {
+        runEffect();
+        runEffect1();
+      };
+  } );
+  </script>
+</head>
+<body>
+<div id="wrapper">
+    <header role="banner">
+      <h1><img alt="Current" width="297.5" height="81.5" src="images/header.jpg"></h1>
+      <nav role="navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="cart.html">Carts</a></li>
+          <li><a href="trip.html">Trips</a></li>
+          <li><a href="history.html">History</a></li>
+        </ul>
+      </nav>
+    </header>
+<main id="main-content" tabindex="-1" role="main">
+  <div class="toggler2">
+    <h3>Cart List B</h3>
+    <button id="buttonListB" class="ui-state-default ui-corner-all">cart details</button>
+    <br>
+    <div id="effect2" class="ui-widget-content ui-corner-all">
+      <p id="textListB">
+        Add a conversion to this list to have it show up here!
+      </p>
+      <button id="buttonListBDelete">delete selected</button><br>
+    </div>
+  </div>
+  <div class="toggler1">
+    <br>
+    <h3>Cart List A</h3>
+    <button id="buttonListA" class="ui-state-default ui-corner-all">cart details</button>
+    <br>
+    <div id="effect1" class="ui-widget-content ui-corner-all">
+      <p id="textListA">
+        Add a conversion to this list to have it show up here!
+      </p>
+      <button id="buttonListADelete">delete selected</button><br>
+    </div>
+  </div>
+</main>
+<footer role="contentinfo">
+<p><small>All content &copy; 2021 Dani Amin.</small></p>
+</footer>
+</div>
+</body>
+<script src="./js/carts.js" type="text/javascript"></script>
+</html>
